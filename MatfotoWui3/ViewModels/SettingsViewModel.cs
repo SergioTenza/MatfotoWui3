@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 using MatfotoWui3.Contracts.Services;
+using MatfotoWui3.Core.Models;
 using MatfotoWui3.Helpers;
 
 using Microsoft.UI.Xaml;
@@ -16,6 +19,15 @@ namespace MatfotoWui3.ViewModels
     public class SettingsViewModel : ObservableRecipient
     {
         private readonly IThemeSelectorService _themeSelectorService;
+        private readonly IPrinterService _PrinterService;
+        
+        private PrinterStatus _printerStatus;
+
+        public PrinterStatus PrinterStatus
+        {
+            get { return _printerStatus; }
+            set { SetProperty(ref _printerStatus, value); }
+        }
         private ElementTheme _elementTheme;
 
         public ElementTheme ElementTheme
@@ -61,7 +73,7 @@ namespace MatfotoWui3.ViewModels
         {
             _themeSelectorService = themeSelectorService;
             _elementTheme = _themeSelectorService.Theme;
-            VersionDescription = GetVersionDescription();
+            VersionDescription = GetVersionDescription();            
         }
 
         private string GetVersionDescription()

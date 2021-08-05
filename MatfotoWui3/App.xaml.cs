@@ -55,9 +55,12 @@ namespace MatfotoWui3
             services.AddSingleton<IActivationService, ActivationService>();
             services.AddSingleton<IPageService, PageService>();
             services.AddSingleton<INavigationService, NavigationService>();
+            services.AddSingleton<IPickFileService, PickFileService>();
+            services.AddSingleton<IPickFolderService, PickFolderService>();
 
             // Core Services
             services.AddSingleton<ISampleDataService, SampleDataService>();
+            services.AddSingleton<IDataService, DataService>();
 
             // Views and ViewModels
             services.AddTransient<ShellPage>();

@@ -1,10 +1,11 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 using MatfotoWui3.Contracts.Services;
-
+using MatfotoWui3.Core.Contracts.Services;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Navigation;
 
@@ -18,7 +19,7 @@ namespace MatfotoWui3.ViewModels
     {
         private bool _isBackEnabled;
         private object _selected;
-        private ICommand _menuFileSettingsCommand;
+        private ICommand _menuFileSettingsCommand;        
         private ICommand _menuViewsCarnetCommand;
         private ICommand _menuViewsCopiasCommand;
         private ICommand _menuViewsMainCommand;
@@ -36,7 +37,7 @@ namespace MatfotoWui3.ViewModels
 
         public INavigationService NavigationService { get; }
 
-        public IRightPaneService RightPaneService { get; }
+        public IRightPaneService RightPaneService { get; }       
 
         public bool IsBackEnabled
         {

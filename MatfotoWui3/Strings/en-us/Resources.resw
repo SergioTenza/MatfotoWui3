@@ -121,7 +121,7 @@
     <value>MatfotoWui3</value>
   </data>
   <data name="ShellMenuBarItem_File.Title" xml:space="preserve">
-    <value>File</value>
+    <value>System</value>
   </data>
   <data name="ShellMenuBarItem_Views.Title" xml:space="preserve">
     <value>Views</value>
@@ -137,22 +137,22 @@
     <comment>Page title for MainPage</comment>
   </data>
   <data name="Copias.ListHeader" xml:space="preserve">
-    <value>Copias</value>
+    <value>Copies</value>
   </data>
   <data name="Copias_NoSelection.Text" xml:space="preserve">
     <value>Select an item from the list.</value>
   </data>
   <data name="ShellMenuItem_Views_Copias.Text" xml:space="preserve">
-    <value>Copias</value>
+    <value>Copies</value>
   </data>
   <data name="Carnet.ListHeader" xml:space="preserve">
-    <value>Carnet</value>
+    <value>ID Photo</value>
   </data>
   <data name="Carnet_NoSelection.Text" xml:space="preserve">
     <value>Select an item from the list.</value>
   </data>
   <data name="ShellMenuItem_Views_Carnet.Text" xml:space="preserve">
-    <value>Carnet</value>
+    <value>Photo ID</value>
   </data>
   <data name="Settings_Personalization.Text" xml:space="preserve">
     <value>Personalization</value>
@@ -188,5 +188,14 @@
   <data name="Settings_Title.Text" xml:space="preserve">
     <value>Settings</value>
     <comment>Page title for SettingsPage</comment>
+  </data>
+  <data name="ShellMenuBarItem_Archivo.Title" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="ShellMenuItem_Archivo_File.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="ShellMenuItem_Archivo_Folder.Text" xml:space="preserve">
+    <value>Folder</value>
   </data>
 </root>

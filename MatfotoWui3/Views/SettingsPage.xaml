@@ -73,6 +73,19 @@
                     Style="{ThemeResource BodyTextBlockStyle}" />
                 <HyperlinkButton x:Uid="SettingsPage_PrivacyTermsLink" Margin="{StaticResource XSmallTopMargin}" />
             </StackPanel>
+
+            <StackPanel Margin="{StaticResource XSmallTopMargin}">
+                <ComboBox Header="Impresoras" PlaceholderText="Selecciona una impresora" Width="200">
+                    <x:String>CITIZEN CX-02</x:String>
+                    <x:String>CITIZEN CX-02W</x:String>
+                    <x:String>CITIZEN CY</x:String>                    
+                </ComboBox>
+                <TextBox Header="Status:" PlaceholderText="Seleccione impresora" />
+                <TextBox Header="Nombre Puerto:" PlaceholderText="Seleccione impresora" />
+                <TextBox Header="Numero Puerto:" PlaceholderText="Seleccione impresora" />
+                <TextBox Header="Impresiones Totales:" PlaceholderText="Seleccione impresora" />
+                <TextBox Header="Impresiones restantes:" PlaceholderText="Seleccione impresora" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

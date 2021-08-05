@@ -20,6 +20,11 @@
     <None Remove="Strings\es-es\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <Content Update="Images\Square44x44Logo.targetsize-256b.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Images\Square44x44Logo.targetsize-256.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -32,9 +37,12 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="7.0.3" />
     <PackageReference Include="CommunityToolkit.WinUI.UI.Controls" Version="7.0.3" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
-    <PackageReference Include="Microsoft.ProjectReunion" Version="0.8.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="Microsoft.ProjectReunion" Version="0.8.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility.Shims" Version="2.0.1" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.WinUI.Managed" Version="2.0.4" />
+    <PackageReference Include="PInvoke.User32" Version="0.7.104" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
   <ItemGroup>
@@ -45,8 +53,8 @@
     <ProjectReference Include="..\MatfotoWui3.Core\MatfotoWui3.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Update="Images\Square44x44Logo.targetsize-256b.png">
+    <Content Update="Images\folder.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
+  </ItemGroup>  
 </Project>

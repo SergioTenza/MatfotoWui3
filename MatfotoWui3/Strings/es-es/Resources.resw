@@ -121,7 +121,7 @@
     <value>Matfoto Printing App</value>
   </data>
   <data name="ShellMenuBarItem_File.Title" xml:space="preserve">
-    <value>Archivo</value>
+    <value>Sistema</value>
   </data>
   <data name="ShellMenuBarItem_Views.Title" xml:space="preserve">
     <value>Vistas</value>
@@ -179,7 +179,7 @@
     <value>Declaracion de Privacidad</value>
   </data>
   <data name="SettingsPage_PrivacyTermsLink.NavigateUri" xml:space="preserve">
-    <value>https://YourPrivacyUrlGoesHere/</value>
+    <value>https://matfoto.es/</value>
     <comment>Here is your Privacy Statement url for SettingsPage</comment>
   </data>
   <data name="ShellMenuItem_File_Settings.Text" xml:space="preserve">
@@ -188,5 +188,14 @@
   <data name="Settings_Title.Text" xml:space="preserve">
     <value>Ajustes</value>
     <comment>Page title for SettingsPage</comment>
+  </data>
+  <data name="ShellMenuBarItem_Archivo.Title" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="ShellMenuItem_Archivo_File.Text" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="ShellMenuItem_Archivo_Folder.Text" xml:space="preserve">
+    <value>Carpeta</value>
   </data>
 </root>
