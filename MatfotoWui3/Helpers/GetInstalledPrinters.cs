@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MatfotoWui3.Helpers
 {
-    class GetInstalledPrinters
+    public class GetInstalledPrinters
     {
         private IList<string> _allPrinters;
         private IList<string> _filteredPrinters;
@@ -18,24 +18,31 @@ namespace MatfotoWui3.Helpers
         public GetInstalledPrinters()
         {
             _citizenNames = new() { "CITIZEN CX-02", "CITIZEN CX-02W", "CY"};
+            _allPrinters = GetAllPrinters();
+            _filteredPrinters = GetFilteredCitizenPrinters();
         }
 
         public IList<string> AllPrinters
         {
-            get => _allPrinters;
-            set => GetAllPrinters();
+            get => GetAllPrinters();            
         }
 
         public IList<string> FilteredPrinters
         {
-            get => _filteredPrinters;
-            set => GetFilteredCitizenPrinters();
+            get => GetFilteredCitizenPrinters();            
         }
 
         private IList<string> GetAllPrinters() 
         {
+            if (_allPrinters != null)
+            {
+                _allPrinters.Clear();
+            }
+            else
+            {
+                _allPrinters = new List<string>();
+            }
             
-            _allPrinters.Clear();
             foreach (string printname in PrinterSettings.InstalledPrinters)
             {
                 _allPrinters.Add(printname);
@@ -46,8 +53,15 @@ namespace MatfotoWui3.Helpers
 
         private IList<string> GetFilteredCitizenPrinters()
         {
-            _filteredPrinters.Clear();
-            
+            if (_filteredPrinters != null)
+            {
+                _filteredPrinters.Clear();
+            }
+            else
+            {
+                _filteredPrinters = new List<string>();
+            }
+
             foreach (string printname in PrinterSettings.InstalledPrinters)
             {
                 foreach (var citizen in _citizenNames)

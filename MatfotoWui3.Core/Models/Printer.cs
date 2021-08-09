@@ -8,14 +8,10 @@ namespace MatfotoWui3.Core.Models
     {
         public string PrinterName { get; set; }
 
+        public string Firmware { get; set; }
+
         public string PortName { get; set; }
 
-        public int PortNumber { get; set; }
-
-        public int TotalLifeMedia { get; set; }
-
-        public int FullLeftMedia { get; set; }
-
-        public int HalfLeftMedia { get; set; }
+        public int PortNumber { get; set; }        
     }
 }

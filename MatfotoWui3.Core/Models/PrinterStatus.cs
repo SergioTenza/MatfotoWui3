@@ -13,6 +13,5 @@ namespace MatfotoWui3.Core.Models
         public int PrinterTotalLifePrints { get; set; }
         public int PrinterLeftMedia { get; set; }
         public string PrinterFirmware { get; set; }
-
     }
 }

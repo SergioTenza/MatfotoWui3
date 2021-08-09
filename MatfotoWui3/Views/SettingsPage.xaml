@@ -75,16 +75,18 @@
             </StackPanel>
 
             <StackPanel Margin="{StaticResource XSmallTopMargin}">
-                <ComboBox Header="Impresoras" PlaceholderText="Selecciona una impresora" Width="200">
-                    <x:String>CITIZEN CX-02</x:String>
-                    <x:String>CITIZEN CX-02W</x:String>
-                    <x:String>CITIZEN CY</x:String>                    
-                </ComboBox>
-                <TextBox Header="Status:" PlaceholderText="Seleccione impresora" />
-                <TextBox Header="Nombre Puerto:" PlaceholderText="Seleccione impresora" />
-                <TextBox Header="Numero Puerto:" PlaceholderText="Seleccione impresora" />
-                <TextBox Header="Impresiones Totales:" PlaceholderText="Seleccione impresora" />
-                <TextBox Header="Impresiones restantes:" PlaceholderText="Seleccione impresora" />
+                <StackPanel Orientation="Horizontal">                    
+                    <ComboBox Header="Impresoras" PlaceholderText="Selecciona una impresora" Width="200" ItemsSource="{x:Bind ViewModel.Printers}" SelectionChanged="{x:Bind ViewModel.ComboSelectionChanged}" >
+                    </ComboBox>
+                    <ProgressRing IsActive="{x:Bind ViewModel.LoadingPrinters}" Width="24" Height="24"
+                          Foreground="Green" Name="MyProgress" Margin="{StaticResource MediumLeftRightMargin}"/>                    
+                </StackPanel>
+                <TextBox Header="Firmware:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterFirmware, Mode=OneWay}"/>
+                <TextBox Header="Status:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterState, Mode=OneWay}" />
+                <TextBox Header="Nombre Puerto:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterPortName, Mode=OneWay}" />
+                <TextBox Header="Numero Puerto:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterPortNumber, Mode=OneWay}" />
+                <TextBox Header="Impresiones Totales:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterTotalLifePrints, Mode=OneWay}" />
+                <TextBox Header="Impresiones restantes:" PlaceholderText="Seleccione impresora" Text="{x:Bind ViewModel.PrinterStatus.PrinterLeftMedia, Mode=OneWay}" />
             </StackPanel>
         </StackPanel>
     </Grid>

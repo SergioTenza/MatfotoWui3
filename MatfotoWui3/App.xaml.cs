@@ -3,6 +3,7 @@
 using MatfotoWui3.Activation;
 using MatfotoWui3.Contracts.Services;
 using MatfotoWui3.Core.Contracts.Services;
+using MatfotoWui3.Core.Models;
 using MatfotoWui3.Core.Services;
 using MatfotoWui3.Helpers;
 using MatfotoWui3.Services;
@@ -18,6 +19,8 @@ namespace MatfotoWui3
     public partial class App : Application
     {
         public static Window MainWindow { get; set; } = new Window() { Title = "AppDisplayName".GetLocalized() };
+
+        public static Printer printer { get; set; } = new Printer();
 
         public App()
         {
@@ -57,10 +60,12 @@ namespace MatfotoWui3
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddSingleton<IPickFileService, PickFileService>();
             services.AddSingleton<IPickFolderService, PickFolderService>();
-
+            services.AddSingleton<MatfotoWui3.Contracts.Services.IPrinterService, MatfotoWui3.Services.PrinterService>();
+            
             // Core Services
             services.AddSingleton<ISampleDataService, SampleDataService>();
             services.AddSingleton<IDataService, DataService>();
+            services.AddSingleton<IPrinterStatusService, PrinterStatusService>();
 
             // Views and ViewModels
             services.AddTransient<ShellPage>();
