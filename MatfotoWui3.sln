@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatfotoWui3", "MatfotoWui3\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatfotoWui3.Core", "MatfotoWui3.Core\MatfotoWui3.Core.csproj", "{EC5061E9-DFBA-4BD2-9857-30BB9334946A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CitizenPrinter", "CitizenPrinter\CitizenPrinter.csproj", "{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMatfoto", "TestMatfoto\TestMatfoto.csproj", "{4E9B9E4E-4627-4184-9F69-DB9C352BD048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,38 @@ Global
 		{EC5061E9-DFBA-4BD2-9857-30BB9334946A}.Release|x64.Build.0 = Release|x64
 		{EC5061E9-DFBA-4BD2-9857-30BB9334946A}.Release|x86.ActiveCfg = Release|x86
 		{EC5061E9-DFBA-4BD2-9857-30BB9334946A}.Release|x86.Build.0 = Release|x86
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|arm64.Build.0 = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|x64.Build.0 = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Debug|x86.Build.0 = Debug|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|arm64.ActiveCfg = Release|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|arm64.Build.0 = Release|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|x64.ActiveCfg = Release|x64
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|x64.Build.0 = Release|x64
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|x86.ActiveCfg = Release|Any CPU
+		{93B953E8-1794-41BB-93C6-2DBCFB38CAE4}.Release|x86.Build.0 = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|arm64.Build.0 = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|x64.Build.0 = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Debug|x86.Build.0 = Debug|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|arm64.ActiveCfg = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|arm64.Build.0 = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|x64.ActiveCfg = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|x64.Build.0 = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E9B9E4E-4627-4184-9F69-DB9C352BD048}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

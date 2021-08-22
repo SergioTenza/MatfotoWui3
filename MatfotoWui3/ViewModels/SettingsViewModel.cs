@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
+using CitizenPrinter;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -153,7 +153,7 @@ namespace MatfotoWui3.ViewModels
 
             PrinterStatus =  _printerStatusService.GetPrinterStatus(selectedItems);
             App.printer.PrinterName = _printerStatus.PrinterName;
-            App.printer.PortName = _printerStatus.PrinterPortName;
+            App.printer.PortName = _printerStatus.PrinterPortName;            
             App.printer.PortNumber = _printerStatus.PrinterPortNumber;
             App.printer.Firmware = _printerStatus.PrinterFirmware;
         }

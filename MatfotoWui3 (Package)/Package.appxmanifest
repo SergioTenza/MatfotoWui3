@@ -9,8 +9,8 @@
 
   <Identity
     Name="FC7FCD3B-1783-43C1-9F59-0226B8AC480D"
-    Publisher="CN=serge"
-    Version="1.0.0.0" />
+    Publisher="CN=TNZ Servicios Informaticos"
+    Version="1.0.2.0" />
 
   <Properties>
     <DisplayName>MatfotoWui3 (Package)</DisplayName>

@@ -23,6 +23,13 @@ namespace MatfotoWui3.Helpers
             }
             return folder;
         }
+
+        public static bool FutureAccessListEmpty()
+        {   
+            var future = StorageApplicationPermissions.FutureAccessList;
+
+            return future.Entries.Count > 0;            
+        }
     }
 }
 

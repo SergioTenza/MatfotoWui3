@@ -1,16 +1,19 @@
-﻿using MatfotoWui3.Core.Contracts.Services;
+﻿using CitizenPrinter;
+using MatfotoWui3.Contracts.Services;
 using MatfotoWui3.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MatfotoWui3.Core.Services
+namespace MatfotoWui3.Services
 {
     public class PrinterStatusService : IPrinterStatusService
     {
         private PrinterStatus _printerStatus;
         private string _printerName { get; set; }
+        private string _portName { get; set; }
+        private int _portNumber { get; set; }
 
         PrinterStatus CitizenPrinterStatus
         {
@@ -30,19 +33,34 @@ namespace MatfotoWui3.Core.Services
             _printerStatus.PrinterName = _printerName;
             _printerStatus.PrinterState = GetStatus(_printerName);
             _printerStatus.PrinterPortName = GetPortName(_printerName);
-            _printerStatus.PrinterFirmware = GetFirmware(_printerName);
-            _printerStatus.PrinterPortNumber = Convert.ToInt32(GetPortNumber(_printerName));
+            int number;
+            bool success = Int32.TryParse(GetPortNumber(_portName), out number);
+            if (success)
+            {
+                _printerStatus.PrinterPortNumber = number;
+            }
+            else
+            {
+                _printerStatus.PrinterPortNumber = -1;
+            }
+            
+            _printerStatus.PrinterFirmware = GetFirmware(_portNumber);            
             _printerStatus.PrinterTotalLifePrints = Convert.ToInt32(GetTotalPrints(_printerName));
             _printerStatus.PrinterLeftMedia = Convert.ToInt32(GetLeftPrints(_printerName));
 
             return CitizenPrinterStatus;
         }
 
-        private string GetFirmware(string printerName)
+        private string GetFirmware(int portNumber)
         {
+            var response = "ERROR";
             try
-            {
-                return "test";
+            {   
+                if (WRAPPER.Printer != null)
+                {
+                    response = WRAPPER.GetFirmware(portNumber);
+                }
+                return response;
             }
             catch (Exception ex)
             {
@@ -66,9 +84,16 @@ namespace MatfotoWui3.Core.Services
 
         private string GetPortName(string printerName)
         {
+            var response = "ERROR"; 
             try
             {
-                return "test3";
+                WRAPPER.SetWorkingPrinter(printerName);
+                if (WRAPPER.Printer != null)
+                {
+                    response =  WRAPPER.GetPrinterPortName(printerName);
+                }
+                _portName = response;
+                return response;
             }
             catch (Exception ex)
             {
@@ -77,11 +102,19 @@ namespace MatfotoWui3.Core.Services
             }
         }
 
-        private string GetPortNumber(string printerName)
+        private string GetPortNumber(string portName)
         {
+            var response = "ERROR";
+            var port = 0;
             try
             {
-                return "4";
+                if (WRAPPER.Printer != null)
+                {
+                    port = WRAPPER.GetPortNo(portName);
+                    response = port.ToString();
+                }
+                _portNumber = port;
+                return response;
             }
             catch (Exception ex)
             {

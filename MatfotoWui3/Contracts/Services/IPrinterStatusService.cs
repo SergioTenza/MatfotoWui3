@@ -1,7 +1,7 @@
 ﻿
 using MatfotoWui3.Core.Models;
 
-namespace MatfotoWui3.Core.Contracts.Services
+namespace MatfotoWui3.Contracts.Services
 {
     public interface IPrinterStatusService
     {
