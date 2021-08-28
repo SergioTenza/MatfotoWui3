@@ -144,14 +144,14 @@ namespace MatfotoWui3.ViewModels
             }
         }
 
-        public async void ComboSelectionChanged(object sender, SelectionChangedEventArgs e)
+        public void ComboSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Get the instance of ComboBox
             ComboBox comboBox = sender as ComboBox;
             // Get the ComboBox selected item text
             string selectedItems = comboBox.SelectedItem.ToString();
 
-            PrinterStatus =  _printerStatusService.GetPrinterStatus(selectedItems);
+            PrinterStatus = _printerStatusService.GetPrinterStatus(selectedItems);
             App.printer.PrinterName = _printerStatus.PrinterName;
             App.printer.PortName = _printerStatus.PrinterPortName;            
             App.printer.PortNumber = _printerStatus.PrinterPortNumber;

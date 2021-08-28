@@ -204,4 +204,10 @@
   <data name="Main_Appbar_Button_File.Label" xml:space="preserve">
     <value>Añadir Archivo</value>
   </data>
+  <data name="Main_Appbar_Button_Clean.Label" xml:space="preserve">
+    <value>Reiniciar Seleccion</value>
+  </data>
+  <data name="Main_Appbar_Button_Folder.Label" xml:space="preserve">
+    <value>Añadir Carpeta</value>
+  </data>
 </root>

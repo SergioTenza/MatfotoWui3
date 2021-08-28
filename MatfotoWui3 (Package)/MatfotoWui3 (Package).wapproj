@@ -133,6 +133,7 @@
     <PRIResource Include="Strings\en-us\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
+    <PRIResource Include="Strings\es-es\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MatfotoWui3\MatfotoWui3.csproj">

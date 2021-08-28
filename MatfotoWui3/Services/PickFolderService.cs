@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace MatfotoWui3.Services
 {
     public class PickFolderService : IPickFolderService
     {
-        public async Task<string> GetSelectedFolderAsync()
+        public async Task<IStorageItem> GetSelectedFolderAsync()
         {
             var folderPicker = new Windows.Storage.Pickers.FolderPicker();
 
@@ -26,12 +27,12 @@ namespace MatfotoWui3.Services
                 // Application now has read/write access to all contents in the picked folder
                 // (including other sub-folder contents)
                 Windows.Storage.AccessCache.StorageApplicationPermissions.
-                FutureAccessList.AddOrReplace("PickedFolderToken", folder);
-                return folder.Name;
+                FutureAccessList.AddOrReplace("key", folder);
+                return folder;
             }
             else
             {
-                return String.Empty; 
+                return null; 
             }
         }
     }

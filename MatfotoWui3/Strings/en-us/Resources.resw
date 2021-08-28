@@ -198,4 +198,16 @@
   <data name="ShellMenuItem_Archivo_Folder.Text" xml:space="preserve">
     <value>Folder</value>
   </data>
+  <data name="Main_GridView_Folder_ToolTip.Content" xml:space="preserve">
+    <value>Right button to delete Folder from list</value>
+  </data>
+  <data name="Main_Appbar_Button_File.Label" xml:space="preserve">
+    <value>Add File</value>
+  </data>
+  <data name="Main_Appbar_Button_Clean.Label" xml:space="preserve">
+    <value>Clean Selection</value>
+  </data>
+  <data name="Main_Appbar_Button_Folder.Label" xml:space="preserve">
+    <value>Add Folder</value>
+  </data>
 </root>

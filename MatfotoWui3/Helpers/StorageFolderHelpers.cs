@@ -25,10 +25,8 @@ namespace MatfotoWui3.Helpers
         }
 
         public static bool FutureAccessListEmpty()
-        {   
-            var future = StorageApplicationPermissions.FutureAccessList;
-
-            return future.Entries.Count > 0;            
+        {
+            return StorageApplicationPermissions.FutureAccessList.Entries.Count > 0;
         }
     }
 }

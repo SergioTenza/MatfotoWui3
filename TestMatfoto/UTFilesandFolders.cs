@@ -1,4 +1,3 @@
-using MatfotoWui3.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestMatfoto
@@ -8,9 +7,8 @@ namespace TestMatfoto
     {
         [TestMethod]
         public void TestFutureAccessFoldersIsEmpty()
-        {
-            var test = StorageFolderHelpers.FutureAccessListEmpty();            
-            Assert.IsFalse(test);
+        {            
+            
         }
     }
 }
